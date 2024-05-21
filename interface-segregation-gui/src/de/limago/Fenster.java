@@ -4,7 +4,7 @@ import java.awt.*;
 import java.awt.event.*;
 
 
-public class Fenster extends Frame{
+public class Fenster extends Frame {
 
 
     public Fenster()  {
@@ -23,15 +23,15 @@ public class Fenster extends Frame{
         new Fenster().setVisible(true);
     }
 
-
     private void ausgabe() {
         System.out.println("Button wurde gedrückt");
     }
-  /* class MyActionListener implements ActionListener {
 
-       @Override
-       public void actionPerformed(final ActionEvent e) {
-           ausgabe();
-       }
-   }*/
+//   private class MyActionListner implements ActionListener {
+//
+//       @Override
+//       public void actionPerformed(ActionEvent e) {
+//           ausgabe();
+//       }
+//   }
 }
