@@ -3,68 +3,42 @@
 //
 
 #pragma once
-#include "../Game.h"
+
+#include <vector>
+#include "../AbstractGame.h"
+#include "../player/Player.h"
+
 
 namespace atlas::game {
-    class NimGameImpl : public Game{
 
-        int stones;
-        bool gameover;
+    class NimGameImpl : public AbstractGame<int,int>{
 
-        void playRound() {
 
-            humanMove();
-            computerMove();
+
+
+
+        // ---- Implementierungssumpf -----------------------------------
+
+    protected:
+
+        void updateBoard() override { setBoard(getBoard() - getMove());}
+
+        bool isGameover() const override{
+            return getBoard() < 1 || getPlayers().empty();
         }
 
-        void humanMove() {
-            int move;
-            while(true) {
-                std::cout << "Es gibt " << stones << " Steine. Bitte nehme Sie 1,2 oder 3." << std::endl;
-                std::cin >> move;
-                if(move >= 1 && move <= 3) break;
-                std::cout << "Ungueltiger Zug" << std::endl;
-            }
-            stones -= move;
-
+        bool isValid() const override{
+            return getMove() >= 1 && getMove() <= 3;
         }
-        void computerMove() {
-            const int moves[] = {3,1,1,2};
-            int move;
-
-            if(stones < 1) {
-                std::cout << " Du Loser" << std::endl;
-                gameover = true;
-                return;
-            }
-            if(stones == 1) {
-                std::cout << " Du hast nur Glueck gehabt" << std::endl;
-                gameover = true;
-                return;
-            }
-
-            move = moves[stones % 4];
-            std::cout << "Compuetr nimmt " << move << " Steine." << std::endl;
-            stones -= move;
-        }
-
     public:
 
-        NimGameImpl():stones{23}, gameover{false} {
-
-        }
-
-
-
-        void play() override {
-            while( ! gameover) {
-                playRound();
-            }
-
+        explicit NimGameImpl(Writer &writer) : AbstractGame(writer) {
+            setBoard(23);
         }
 
 
     };
+
 }
 
 
