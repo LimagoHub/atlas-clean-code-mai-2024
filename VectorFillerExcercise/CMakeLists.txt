@@ -18,4 +18,8 @@ add_executable(VectorFillerExcercise main.cpp
         src/collection/impl/sequential/VectorFactorySequentialImpl.h
         src/collection/VectorFactoryBuilder.h
         src/collection/VectorFactoryBuilder.h
+        src/collection/impl/decorators/VectorFactoryBenchmarkDecorator.h
+        src/collection/impl/parallel/VectorFactoryParallelImpl.h
+        src/generator/GeneratorBuilder.h
+        src/generator/impl/random/MersenneTwisterNumberGeneratorFactory.h
 )

@@ -17,3 +17,9 @@ U
 %src/collection/VectorFactoryBuilder.h,4\f\4f207031445a9d07b73d324424a1e6d3c02e1dff
 U
 %src/collection/VectorFacroryBuilder.h,b\9\b9a58ac4455fb8a01e06e9cbc0fe9da506e2c7eb
+N
+src/collection/VectorFactory.h,4\3\43a35a65eb0b184a73c23e5fdd6409aa31865e83
+l
+<src/collection/impl/sequential/VectorFactorySequentialImpl.h,a\0\a00232a972b9293a4b8cfdecaf51fff1742ed3e4
+h
+8src/collection/impl/parallel/VectorFactoryParallelImpl.h,9\8\98c6fd20173a8f7676248811a1e4e7b4d9df17ba
