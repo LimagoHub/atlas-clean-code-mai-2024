@@ -38,12 +38,14 @@ namespace atlas::game {
         BOARD board;
         MOVE move;
 
-    private:
+
+
         Writer &writer;
         std::vector<PLAYER *> players;
         PLAYER * currentPlayer;
 
         void playRound() {
+            //int n =  5;
             for( auto player : players) {
                 setCurrentPlayer(player);
                 playSingleMove();
@@ -76,6 +78,7 @@ namespace atlas::game {
             return true;
         }
         void printGameOverMessageIfgameIsOver() { // Operation
+            // TODO Make it better
             if(isGameover()) {
                write( getCurrentPlayer()->getName() + " hat verloren");
             }
@@ -83,7 +86,14 @@ namespace atlas::game {
 
     protected:
 
-        void write(std::string_view message) {
+
+        virtual bool isGameover() const = 0;
+        virtual bool isValid() const = 0;
+        virtual void updateBoard()  = 0;
+
+
+
+        void write(std::string_view message) const{
             writer.write(message);
         }
 
@@ -113,11 +123,8 @@ namespace atlas::game {
             return currentPlayer;
         }
 
-        void setCurrentPlayer(PLAYER *currentPlayer) {
-            AbstractGame::currentPlayer = currentPlayer;
+        void setCurrentPlayer(PLAYER *currentPlayer_) {
+            currentPlayer = currentPlayer_;
         }
-        virtual bool isGameover() const = 0;
-        virtual bool isValid() const = 0;
-        virtual void updateBoard()  = 0;
     };
 }

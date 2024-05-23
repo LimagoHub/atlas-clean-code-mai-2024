@@ -10,9 +10,9 @@ namespace atlas::game::player {
 
     class HumanPlayer:public AbstractNimGamePlayer {
     public:
-        explicit HumanPlayer(const std::string &name) : AbstractNimGamePlayer(name) {}
+        using AbstractNimGamePlayer::AbstractNimGamePlayer;
 
-        int makeMove(const int &stones) override {
+        [[nodiscard]] int makeMove(const int &stones) const  override {
             int move;
             std::cout << "Es gibt " << stones << " Steine. Bitte nehme Sie 1,2 oder 3." << std::endl;
             std::cin >> move;
