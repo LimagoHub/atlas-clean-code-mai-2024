@@ -21,17 +21,17 @@ namespace atlas::bootstrap {
 
         static void create(size_t threadcount) {
             std::cout << "Messung mit " << threadcount << " Threads" << std::endl;
-            VECTOR_FACTORY factory = createVectorFactory();
+            VECTOR_FACTORY factory = createVectorFactory(threadcount);
 
             atlas::client::VectorClientImpl client{std::move(factory)};
             client.doSomethingWithLargeVector();
         }
 
-        static VECTOR_FACTORY createVectorFactory () {
+        static VECTOR_FACTORY createVectorFactory (size_t threadCount) {
             collection::VectorFactoryBuilder::setLogger(true);
             collection::VectorFactoryBuilder::setSecure(true);
             collection::VectorFactoryBuilder::setBenchmark(true);
-            return collection::VectorFactoryBuilder::createWithGenerator(createGeneratorBuilder());
+            return collection::VectorFactoryBuilder::createWithGenerator(createGeneratorBuilder(),threadCount );
         }
 
         static GENERATOR_BUILDER createGeneratorBuilder() {

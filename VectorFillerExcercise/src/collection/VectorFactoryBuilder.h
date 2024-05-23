@@ -51,9 +51,16 @@ namespace atlas::collection {
             VectorFactoryBuilder::benchmark = benchmark;
         }
 
-        static VECTOR_FACTORY createWithGenerator(GENERATOR_BUILDER generatorbuilder) {
+        static VECTOR_FACTORY createWithGenerator(GENERATOR_BUILDER generatorbuilder, size_t threadCount) {
             VECTOR_FACTORY result;
-            result = std::make_unique<VECTOR_FACTORY_SEQUENCIAL>(std::move(generatorbuilder->create()));
+            switch(threadCount) {
+                default:
+                case 1: result = std::make_unique<VECTOR_FACTORY_SEQUENCIAL>(std::move(generatorbuilder->create()));
+                break;
+
+
+            }
+
             if (logger) result = std::make_unique<VECTOR_FACTORY_LOGGER>(std::move(result));
             if (secure) result = std::make_unique<VECTOR_FACTORY_SECURE >(std::move(result));
             if (benchmark) result = std::make_unique<VECTOR_FACTORY_BENCHMARK >(std::move(result));
