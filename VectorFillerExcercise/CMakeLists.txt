@@ -16,4 +16,6 @@ add_executable(VectorFillerExcercise main.cpp
         src/generator/impl/random/MersenneTwisterNumberGenerator.h
         src/collection/AbstractVectorFactory.h
         src/collection/impl/sequential/VectorFactorySequentialImpl.h
+        src/collection/VectorFactoryBuilder.h
+        src/collection/VectorFactoryBuilder.h
 )
