@@ -1,7 +1,5 @@
 
-—	cpp:S1117""Udeclaration shadows a static data member of 'atlas::collection::VectorFactoryBuilder'(óÜ8÷Š®©ú1J$1c5707c4-b4ab-4eef-9193-6809b1b35b35
-—	cpp:S1117*"Udeclaration shadows a static data member of 'atlas::collection::VectorFactoryBuilder'(ÂˆÄµ8³Ş»ªú1J$d433d9ec-94be-4f1a-b5a7-9cd0659c9d6e
-œ	cpp:S11172"Udeclaration shadows a static data member of 'atlas::collection::VectorFactoryBuilder'(àıËĞûÿÿÿÿ8î§½ªú1J$7d975b24-7a9f-4188-9e9c-849e6cfc3678
-v	cpp:S5274:"/moving a temporary object prevents copy elision(£Ğ‡»ıÿÿÿÿ8©Ø­ú1J$9f8c5eee-e297-4abb-bd67-1534c47a365a
-	cpp:S13018"KReplace this "switch" statement by "if" statements to increase readability.(ú¥¸Ú8ûšÙ­ú1J$4c87aee0-74d7-4d09-9e6e-ec3bb9b16c87
-k	cpp:S3458:"$Remove this redundant "case" clause.(£Ğ‡»ıÿÿÿÿ8‡§Ş­ú1J$2527f222-68bb-48fc-b072-e12d8bd9ec28
+—	cpp:S1117&"Udeclaration shadows a static data member of 'atlas::collection::VectorFactoryBuilder'(óÜ8îáÔÊú1J$a8309a6a-52e7-4e62-aab5-e93ea56c2278
+—	cpp:S1117."Udeclaration shadows a static data member of 'atlas::collection::VectorFactoryBuilder'(ÂˆÄµ8ÎˆÕÊú1J$c4e0b0e5-80a5-408d-abcb-6dc26cfc0f74
+œ	cpp:S11176"Udeclaration shadows a static data member of 'atlas::collection::VectorFactoryBuilder'(àıËĞûÿÿÿÿ8¸¬ÕÊú1J$40f9fbb7-c5c3-4448-91fc-52596d2ec18f
+v	cpp:S5274?"/moving a temporary object prevents copy elision(£Ğ‡»ıÿÿÿÿ8ŠˆÊÒú1J$6bd54261-c0ae-4df7-b50b-f1aca511ef79

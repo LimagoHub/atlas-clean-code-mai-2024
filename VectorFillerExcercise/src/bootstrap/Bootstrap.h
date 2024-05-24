@@ -40,7 +40,7 @@ namespace atlas::bootstrap {
 
         auto startApplication()-> void const {
             const size_t availableProcessors = std::thread::hardware_concurrency();
-            for (int threadCount = 1; threadCount <= availableProcessors + 1; ++threadCount) {
+            for (int threadCount = 0; threadCount <= availableProcessors + 1; ++threadCount) {
                 create(threadCount);
             }
 
