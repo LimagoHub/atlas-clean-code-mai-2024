@@ -25,7 +25,7 @@ namespace atlas::collection {
 
         auto createAndFillVector(size_t size) -> VECTOR override {
             stopwatch_->start();
-            VECTOR result = this->vectorFactoryPointer->createAndFillVector(size);
+            const VECTOR result = this->vectorFactoryPointer->createAndFillVector(size);
             stopwatch_->stop();
             std::cout << "Dauer = " << stopwatch_->getDuration().count() << " millis." << std::endl;
             return result;

@@ -14,7 +14,6 @@
 namespace atlas::bootstrap {
     class Bootstrap {
         using VECTOR_FACTORY = std::unique_ptr<atlas::collection::VectorFactory<int>>;
-
         using GENERATOR_BUILDER = std::unique_ptr<generator::GeneratorBuilder<int>>;
     public:
 
@@ -28,8 +27,8 @@ namespace atlas::bootstrap {
         }
 
         static VECTOR_FACTORY createVectorFactory (size_t threadCount) {
-            collection::VectorFactoryBuilder::setLogger(true);
-            collection::VectorFactoryBuilder::setSecure(true);
+            //collection::VectorFactoryBuilder::setLogger(true);
+            //collection::VectorFactoryBuilder::setSecure(true);
             collection::VectorFactoryBuilder::setBenchmark(true);
             return collection::VectorFactoryBuilder::createWithGenerator(createGeneratorBuilder(),threadCount );
         }

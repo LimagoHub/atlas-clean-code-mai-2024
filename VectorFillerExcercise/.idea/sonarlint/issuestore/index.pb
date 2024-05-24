@@ -31,3 +31,5 @@ I
 src/generator/Generator.h,1\f\1ffbbfeb738b5878f07933aee5b78ea49fd91e64
 j
 :src/generator/impl/random/MersenneTwisterNumberGenerator.h,2\c\2c084901be360fcea52e1734cff9305067b6f471
+C
+src/client/Client.h,e\c\ec212235df496b6bf1a581f0ec6fe5944a569c1e
