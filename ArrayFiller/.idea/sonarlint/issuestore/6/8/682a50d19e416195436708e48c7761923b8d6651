@@ -1,5 +1,0 @@
-
-„	cpp:S5945"=Use "std::array" or "std::vector" instead of a C-style array.(‰Û¥èøÿÿÿÿ8È•Éƒú1J$1804176a-b443-4805-b38d-a5b887ac0b58
-h	cpp:S5421"!Global variables should be const.(‰Û¥èøÿÿÿÿ8Ê•Éƒú1J$d7fe6035-1a4e-4ad0-a382-d8d53f7efb03
-Š	cpp:S5566"CChange this raw for-loop to a range for-loop or an "std::for_each".(åÍÙìþÿÿÿÿ8ÉÇÉƒú1J$7d397dbb-5be4-4d03-b68d-7b99e485879c
-v	cpp:S5020"/Replace "rand" with the facilities in <random>.(í¦µ—üÿÿÿÿ8ÊÇÉƒú1J$65ae908d-5b91-431c-9145-736660d0c950
